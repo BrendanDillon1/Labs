@@ -1,0 +1,162 @@
+body {
+   margin: 0;
+   font-family: 'Open Sans', sans-serif;
+
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+ }
+ .nav__title {
+
+ }
+ .nav__link {
+    margin: 7px;
+    text-decoration: none;
+    color: gray;
+    
+ }
+ .nav__button {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    border-style: none;
+    width: 100%;
+ }
+
+
+h5 {
+   margin: 7px;
+   color: black;
+}
+.content {
+    display: block;
+
+ }
+ .content__lorem {
+    font-size: 14px;
+    border-left: 2px solid gray;
+    padding: 0px 5px;
+
+ }
+ .content__button {
+    background-color: black;
+    color: white;
+    border-style: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+ }
+
+.footer {
+    display: block;
+    background-color: rgb(231, 196, 163);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 25px;
+    width: 100%;
+    padding: 5px;
+    margin: 0px;
+ }
+ .footer__title {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+ } 
+  .footer__link {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin-right: 25px;
+    color: gray;
+    text-decoration: none;
+ }
+
+.graphic {
+    position: relative;
+    
+}
+.graphic__circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background-color:  rgba(207, 130, 213, 0.6);
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    
+    
+    
+
+ }
+ .graphic__circle--medium {
+    height: 125px;
+    width: 125px;
+    border-radius: 100%;
+    background-color: rgba(247, 193, 162, 0.7);
+    top: 125px;
+    
+   
+    
+    
+ }
+ .graphic__circle--large {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    background-color:  rgba(247, 136, 167, 0.6);
+    right: 75px;
+    top: 50px;
+    
+ }
+ .wrapper {
+   display: flex;
+ }
+
+ .graphic {
+   display: none;
+   
+
+ }
+ 
+
+
+
+@media (min-width: 768px)  {
+
+   .nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+   }
+   .nav__title {
+      margin-right: auto;
+   }
+   
+   .nav__link {
+      margin: 5px;
+      text-decoration: none;
+      color: gray;
+   }
+   .nav__button {
+      background-color: black;
+      color: white;
+      border-radius: 20px;
+      padding: 10px;
+      border-style: none;
+      width: 65px;
+   } 
+   .content {
+      width: 50%;
+   }
+   .graphic{
+      width: 50%;
+      display: inline;
+   }
+ }
+ 
+
