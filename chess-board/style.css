@@ -1,0 +1,60 @@
+.rainbow-boxes {
+    width: 100%;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr
+    
+    
+}
+    .box1 {
+    width: 150px;
+    height: 100px;
+    background-color: red;
+    text-align: center;
+    border: 2px solid black;
+    color: white;
+    
+}
+.box2 {
+    width: 150px;
+    height: 100px;
+    background-color: orange;
+    text-align: center;
+    border: 2px solid black;
+}
+.box3 {
+    width: 150px;
+    height: 100px;
+    background-color: yellow;
+    text-align: center;
+    border: 2px solid black;
+}
+.box4 {
+    width: 150px;
+    height: 100px;
+    background-color: green;
+    text-align: center;
+    border: 2px solid black;
+}
+.box5 {
+    width: 150px;
+    height: 100px;
+    background-color: blue;
+    text-align: center;
+    border: 2px solid black;
+}
+.box6 {
+    width: 150px;
+    height: 100px;
+    background-color: purple;
+    text-align: center;
+    border: 2px solid black;
+}
+
+@media screen(600px) {
+    .rainbow-boxes {
+        width: 100%;
+        display: grid;
+        
+        
+ }
+}

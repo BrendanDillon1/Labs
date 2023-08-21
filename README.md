@@ -1,2 +1,0 @@
-# Labs
-Grand Circus Labs
