@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5a961;
+  margin: 0;
+  padding: 0;
+}
+
+#posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #f59061;
+}
+
+.post {
+  background-color: rgba(255, 255, 255, 0.404);
+  border-radius: 5px;
+  margin: 10px;
+  overflow: hidden;
+  box-shadow: 13px 17px 20px 0px rgba(0, 0, 0, 0.5);
+  width: 200px;
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+}
+
+.post-title {
+  padding: 10px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.589);
+}
