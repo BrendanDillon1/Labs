@@ -10,3 +10,10 @@ export class UserNotFoundError extends Error {
     this.name = "userNotFoundError";
   }
 }
+
+export class CartItemNotFoundError extends Error {
+  constructor() {
+    super("Could not find this cart item");
+    this.name = "cartItemNotFoundError";
+  }
+}

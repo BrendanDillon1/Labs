@@ -13,7 +13,7 @@ export const postProduct: reqRes = async (req, res) => {
     res.status(400).send("Bad Request");
   }
 };
-// READ ALL
+// READ ALL / PARAMS
 
 export const getProducts: reqRes = async (req, res) => {
   try {
@@ -47,7 +47,8 @@ export const updateProduct: reqRes = async (req, res) => {
     const product = await Product.findById(req.params.id);
     if (!product) throw new ProductNotFoundError();
     if (req.body.name) product.name = req.body.name;
-    if (req.body.price) product.price = req.body.product;
+    if (req.body.price) product.price = req.body.price;
+    if (req.body.photoURL) product.photoURL = req.body.photoURL;
     product.save();
     res.status(200).send(product);
   } catch (err) {

@@ -46,8 +46,9 @@ export const updateUser: reqRes = async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
     if (!user) throw new UserNotFoundError();
-    if (req.body.name) user.displayName = req.body.name;
+    if (req.body.displayName) user.displayName = req.body.displayName;
     if (req.body.darkTheme) user.darkTheme = req.body.darkTheme;
+    if (req.body.photoURL) user.photoURL = req.body.photoURL;
     user.save();
     res.status(200).send(user);
   } catch (err) {

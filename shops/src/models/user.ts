@@ -8,10 +8,11 @@ const UserSchema = new mongoose.Schema(
     },
     photoURL: {
       type: String,
-      required: true,
+      required: false,
     },
     darkTheme: {
       type: Boolean,
+      required: true,
     },
   },
   { timestamps: true }
