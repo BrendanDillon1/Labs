@@ -1,0 +1,48 @@
+h2 {
+  font-family: "Caveat", sans-serif;
+  font-size: 3rem;
+}
+
+.vote-section {
+  position: absolute;
+  top: 200px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 20px;
+  font-family: sans-serif;
+}
+
+.flavor {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #0e3c7e;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1e60a9;
+}
+
+button:disabled {
+  background-color: gray;
+}
+
+.vote-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.vote-bar {
+  height: 20px;
+  border-radius: 5px;
+}
