@@ -1,0 +1,17 @@
+.ad {
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+}
+
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
+.dark-theme {
+  background-color: #333;
+  color: white;
+  border: 2px solid white;
+}
