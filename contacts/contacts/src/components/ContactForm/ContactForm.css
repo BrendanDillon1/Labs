@@ -1,0 +1,54 @@
+/* Overall container */
+.contactForm {
+  background-color: #1d2527; /* slightly darker than the main background */
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 400px;
+  margin: auto; /* centers the form */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* optional: adds a subtle shadow */
+}
+
+/* Styling for each input field */
+.contactForm input[type="text"],
+.contactForm input[type="number"] {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 25px;
+  background-color: #ecf2f4;
+  color: #151b1d;
+  text-align: center;
+  outline: none;
+}
+
+/* Checkbox styling */
+.contactForm label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contactForm input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Button styling */
+.contactForm button {
+  display: block;
+  padding: 0.8rem 2rem;
+  border: 2px solid #e36940;
+  background-color: transparent;
+  color: #e36940;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.contactForm button:hover {
+  background-color: #e36940;
+  color: #ecf2f4;
+}
