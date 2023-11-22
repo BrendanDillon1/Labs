@@ -1,23 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Product } from "../Product";
-import { getProducts } from "../../../services/productService";
+import { getProducts } from "../services/productService";
 import ProductCard from "../../src/components/ProductCard";
 
 const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const productList = await getProducts();
-        setProducts(productList);
-      } catch (error) {
-        console.error(error);
-      }
-    };
+    const maxPrice = searchParams.get("maxPrice");
+    const includes = searchParams.get("includes");
+    const limit = searchParams.get("limit");
 
-    fetchProducts();
-  }, []);
+    getProducts(maxPrice ? Number(maxPrice) : null, includes, limit ? Number(limit) : null)
+      .then(setProducts)
+      .catch(console.error);
+  }, [searchParams]);
 
   return (
     <div className="product-list">
