@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { Product } from "../Product";
 import { getProducts } from "../services/productService";
 import ProductCard from "../../src/components/ProductCard";
+import Filter from "./Filter";
 
 const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([]);

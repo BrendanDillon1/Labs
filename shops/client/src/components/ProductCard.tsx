@@ -2,9 +2,9 @@ import React from "react";
 import { Product } from "../Product";
 import { Link } from "react-router-dom";
 
-// interface ProductCardProps {
-//   product: Product;
-// }
+interface ProductCardProps {
+  product: Product;
+}
 
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
   return (

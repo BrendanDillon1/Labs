@@ -13,9 +13,7 @@ app.use(express.json());
 app.use("/products", products);
 app.use("/users", users);
 
-const port = 3000;
-
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const MONGO_URL = process.env.MONGO_URL || "";
 mongoose.set("strictQuery", false);
 mongoose
