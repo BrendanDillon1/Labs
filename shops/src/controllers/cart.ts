@@ -13,7 +13,6 @@ export const getCartItems: reqRes = async (req, res) => {
 };
 
 // CREATE
-
 export const postCartItem: reqRes = async (req, res) => {
   try {
     const existingCartItem = await Cart.findOne({ userId: req.params.userId, "product._id": req.body.product._id });
@@ -21,19 +20,18 @@ export const postCartItem: reqRes = async (req, res) => {
     if (existingCartItem) {
       existingCartItem.quantity += req.body.quantity;
       await existingCartItem.save();
-      return res.status(200).send(existingCartItem);
+      res.status(200).send(existingCartItem);
+    } else {
+      const cartItem = new Cart(req.body);
+      await cartItem.save();
+      res.status(201).send(cartItem);
     }
-
-    const cartItem = new Cart(req.body);
-    await cartItem.save();
-    res.status(201).send(cartItem);
   } catch (err) {
     res.status(400).send("Bad Request");
   }
 };
 
 // UPDATE
-
 export const updateCartItem: reqRes = async (req, res) => {
   try {
     const cartItem = await Cart.findOne({ userId: req.params.userId, "product._id": req.params.productId });
@@ -41,7 +39,6 @@ export const updateCartItem: reqRes = async (req, res) => {
     if (!cartItem) throw new CartItemNotFoundError();
 
     cartItem.quantity = req.body.quantity;
-
     await cartItem.save();
     res.status(200).send(cartItem);
   } catch (err) {
@@ -52,8 +49,8 @@ export const updateCartItem: reqRes = async (req, res) => {
     res.status(status.code).send(status.message);
   }
 };
-//DELETE
 
+// DELETE
 export const deleteCartItem: reqRes = async (req, res) => {
   try {
     const result = await Cart.findOneAndDelete({ userId: req.params.userId, "product._id": req.params.productId });
