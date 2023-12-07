@@ -1,0 +1,5 @@
+{
+  "mongodb": {
+    "uri": "mongodb+srv://admin:Alpha8455@cluster0.xfj62wl.mongodb.net/shoutouts"
+  }
+}
